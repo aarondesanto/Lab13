@@ -1,0 +1,15 @@
+.someClass {
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+}
+img {
+	width: 150px;
+}
+h1 {
+	font-size: 1.4em;
+	font-family: tahoma, arial, sans-serif;
+}
+h3 {
+	font-family: tahoma, arial, sans-serif;
+}
