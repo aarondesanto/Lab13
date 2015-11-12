@@ -5,8 +5,10 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 	var posts = response.data.children;
 	
 	$.each(posts, function(index, post) {
-	
-		var $div = $('<div />').attr('class', 'postWrapper').appendTo($('body'));
+		
+		var $wideClick = $('<a />').attr({ class: 'aLinkEr', href: post.data.url, target: '_blank' }).appendTo($('body'));
+		
+		var $div = $('<div />').attr('class', 'postWrapper').appendTo($wideClick);
 		
 		var $title = $('<h1 />').append(post.data.title);
 		
@@ -28,9 +30,7 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 		}, function () {
 			$(this).removeClass('hovered');
 		}
-	);
-	
-	
+	);	
 	
 	
 	console.log(posts[0]);
