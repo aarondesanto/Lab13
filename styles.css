@@ -25,10 +25,23 @@ h3 {
 	font-family: cursive, arial, sans-serif;
 	color: white;
 }
-header {
-	
+h4 {
+	margin: 0;
+	text-align: center;
+	font-family: cursive, arial, sans-serif;
+	color: white;
 }
 
+#scrollToTop {
+	position: fixed;
+	top: 95%;
+	left: 95%;
+	width: 50px;
+	height: 25px;
+	padding: 2px;
+	border-radius: 45%;
+	background-color: red;
+}
 .postLink {
 	text-decoration: none;
 }
