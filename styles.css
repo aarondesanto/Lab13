@@ -2,6 +2,29 @@ html, body {
 	height: 100%;
 	background: url('images/background.jpg');
 }
+h1 {
+	display: inline-block;
+	width: 50%;
+	padding: 1px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 1.4em;
+	font-family: cursive, arial, sans-serif;
+	color: #FF0000;
+}
+h3 {
+	margin: 30px 0 0 10px;
+	font-size: 0.9em;
+	font-family: cursive, arial, sans-serif;
+	color: white;
+}
+header {
+	
+}
+
+.postLink {
+	text-decoration: none;
+}
 .postWrapper {
 	width: 50%;
 	border: 3px solid #00FF27;
@@ -12,41 +35,39 @@ html, body {
 .postWrapper:hover {
 	background-color: rgba(255, 255, 255, 0.5);
 }
+.postWrapper:active {
+	background-color: rgba(200, 200, 200, 0.5);
+}
 .thumbs {
 	display: inline-block;
 	float: right;
 	height: 100px;
-}
-h1 {
-	display: inline-block;
-	text-align: center;
-	width: 50%;
-	padding: 1px;
-	color: #FF0000;
-	border-radius: 10px;
-	font-size: 1.4em;
-	font-family: cursive, tahoma, arial, sans-serif;
-}
-h3 {
-	font-size: 0.9em;
-	font-family: cursive, tahoma, arial, sans-serif;
-	color: white;
-	margin-left: 5px;
+	margin: 20px 20px 0 0;
 }
 .authorSpan {
 	color: blue;
 }
+.commentLink {
+	position: relative;
+	left: 60%;
+	margin: 0;
+	border-radius: 5px;
+	color: #8888FF;
+	font-family: cursive, arial, sans-serif;
+	text-decoration: none;
+	background-image: url('images/fires.gif');
+	background-size: 180px;
+	background-repeat: no-repeat;
+}
+.commentLink:active {
+	background-image: none;
+	background-color: rgba(255, 100, 100, 1);
+}
 .dividerImg {
 	position: relative;
-	left: -5px;
 	top: 9px;
+	left: -5px;
 	width: 101%;
 	height: 5px;
 	margin: 0 auto;
-}
-.postLink {
-	text-decoration: none;
-}
-.postLink:active {
-
 }
