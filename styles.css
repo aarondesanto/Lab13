@@ -3,6 +3,13 @@ html, body {
 	background: url('images/background.jpg');
 }
 h1 {
+	margin: 50px;
+	text-align: center;
+	font-family: cursive, arial, sans-serif;
+	color: #FF00FF;
+	background-image: url('images/fires.gif');
+}
+h2 {
 	display: inline-block;
 	width: 50%;
 	padding: 1px;

@@ -4,7 +4,7 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 	
 	var posts = response.data.children;
 	
-	$('<header />').append("Super Cool 90s Reddit Website").prependTo($('body'));
+	$('<h1 />').append("Super Cool 90s Reddit.Com Website!").prependTo($('body'));
 	
 	$.each(posts, function(index, post) {
 		
@@ -12,7 +12,7 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 		
 		var $div = $('<div />').attr('class', 'postWrapper').appendTo($postLink);
 		
-		var $title = $('<h1 />').append(post.data.title).appendTo($div);
+		var $title = $('<h2 />').append(post.data.title).appendTo($div);
 		
 		var $thumb = $('<img />').attr({ class: 'thumbs', src: post.data.thumbnail, alt: 'No Image Preview Available' }).appendTo($div);
 		
@@ -25,9 +25,6 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 		
 	});
 	
-	
-	
-	console.log(posts[0]);
 });
 
 });
