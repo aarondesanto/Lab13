@@ -1,13 +1,15 @@
 html, body {
 	height: 100%;
+	background: url('images/background.jpg');
 }
-.someClass {
+.postWrapper {
 	width: 50%;
-	border: 1px solid black;
+	border: 3px solid #00FF27;
+	border-bottom: none;
 	margin: 5px auto;
 	padding: 5px;
 }
-img {
+.thumbs {
 	display: inline-block;
 	float: right;
 	height: 100px;
@@ -17,15 +19,28 @@ h1 {
 	text-align: center;
 	width: 50%;
 	padding: 1px;
-	background-color: #FFF0F0;
+	color: #FF0000;
 	border-radius: 10px;
 	font-size: 1.4em;
-	font-family: tahoma, arial, sans-serif;
+	font-family: cursive, tahoma, arial, sans-serif;
 }
 h3 {
 	font-size: 0.9em;
-	font-family: tahoma, arial, sans-serif;
+	font-family: cursive, tahoma, arial, sans-serif;
+	color: white;
+	margin-left: 5px;
 }
-.author {
+.authorSpan {
 	color: blue;
+}
+.dividerImg {
+	position: relative;
+	left: -5px;
+	top: 9px;
+	width: 101%;
+	height: 5px;
+	margin: 0 auto;
+}
+.hovered {
+	background-color: rgba(255, 255, 255, 0.5);
 }

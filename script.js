@@ -1,18 +1,39 @@
 $(document).ready(function() {
 
-$.get('https://www.reddit.com/r/AmazingTechnology/.json', function(response) {
+$.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 	
 	var posts = response.data.children;
 	
-	$.each(posts, function(index, each) {
-		var $div = $("<div class='someClass' />").appendTo($('body'));
-		$div.append("<h1>" + each.data.title + "</h1>");
-		$div.append("<a href='" + each.data.url + "'><img src='" + each.data.thumbnail + "'></a>");
-		$div.append("<h3> Posted by: <span class='author'>" + each.data.author + "</span></h3>");
+	$.each(posts, function(index, post) {
+	
+		var $div = $('<div />').attr('class', 'postWrapper').appendTo($('body'));
+		
+		var $title = $('<h1 />').append(post.data.title);
+		
+		var $thumbLink = $('<a />').attr('href', post.data.url);
+		var $thumb = $('<img />').attr({ class: 'thumbs', src: post.data.thumbnail, alt: 'Click to view post' }).appendTo($thumbLink);
+		
+		var $author = $('<h3 />').append("Posted by: ");
+		var $authorSpan = $('<span />').attr('class', 'authorSpan').append(post.data.author).appendTo($author);
+		
+		var $divImg = $('<img />').attr({ class: 'dividerImg', src: 'images/divider.gif' });
+		
+		$div.append($title, $thumbLink, $author, $divImg);
+		
 	});
 	
-	$('img').attr('alt', "Click here to read this article.")
+	$('div.postWrapper').hover(
+		function () {
+			$(this).addClass('hovered');
+		}, function () {
+			$(this).removeClass('hovered');
+		}
+	);
 	
+	
+	
+	
+	console.log(posts[0]);
 });
 
 });
