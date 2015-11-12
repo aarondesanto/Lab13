@@ -6,31 +6,23 @@ $.get('https://www.reddit.com/r/ImaginaryTechnology/.json', function(response) {
 	
 	$.each(posts, function(index, post) {
 		
-		var $wideClick = $('<a />').attr({ class: 'aLinkEr', href: post.data.url, target: '_blank' }).appendTo($('body'));
+		var $postLink = $('<a />').attr({ class: 'postLink', href: post.data.url, target: '_blank' }).appendTo($('body'));
 		
-		var $div = $('<div />').attr('class', 'postWrapper').appendTo($wideClick);
+		var $div = $('<div />').attr('class', 'postWrapper').appendTo($postLink);
 		
 		var $title = $('<h1 />').append(post.data.title);
 		
-		var $thumbLink = $('<a />').attr('href', post.data.url);
-		var $thumb = $('<img />').attr({ class: 'thumbs', src: post.data.thumbnail, alt: 'Click to view post' }).appendTo($thumbLink);
+		var $thumb = $('<img />').attr({ class: 'thumbs', src: post.data.thumbnail, alt: 'No Image Preview Available' });
 		
 		var $author = $('<h3 />').append("Posted by: ");
 		var $authorSpan = $('<span />').attr('class', 'authorSpan').append(post.data.author).appendTo($author);
 		
 		var $divImg = $('<img />').attr({ class: 'dividerImg', src: 'images/divider.gif' });
 		
-		$div.append($title, $thumbLink, $author, $divImg);
+		$div.append($title, $thumb, $author, $divImg);
 		
 	});
 	
-	$('div.postWrapper').hover(
-		function () {
-			$(this).addClass('hovered');
-		}, function () {
-			$(this).removeClass('hovered');
-		}
-	);	
 	
 	
 	console.log(posts[0]);

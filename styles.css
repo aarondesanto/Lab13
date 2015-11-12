@@ -9,6 +9,9 @@ html, body {
 	margin: 5px auto;
 	padding: 5px;
 }
+.postWrapper:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
 .thumbs {
 	display: inline-block;
 	float: right;
@@ -41,9 +44,9 @@ h3 {
 	height: 5px;
 	margin: 0 auto;
 }
-.hovered {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-.aLinkEr {
+.postLink {
 	text-decoration: none;
+}
+.postLink:active {
+
 }
